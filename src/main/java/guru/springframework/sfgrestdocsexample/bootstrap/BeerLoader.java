@@ -2,6 +2,7 @@ package guru.springframework.sfgrestdocsexample.bootstrap;
 
 import guru.springframework.sfgrestdocsexample.domain.Beer;
 import guru.springframework.sfgrestdocsexample.repositories.BeerRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -11,13 +12,11 @@ import java.math.BigDecimal;
  * Created by jt on 2019-05-17.
  */
 @Component
+@AllArgsConstructor
 public class BeerLoader implements CommandLineRunner {
 
     private final BeerRepository beerRepository;
 
-    public BeerLoader(BeerRepository beerRepository) {
-        this.beerRepository = beerRepository;
-    }
 
     @Override
     public void run(String... args) throws Exception {
